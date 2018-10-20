@@ -63,7 +63,7 @@ def column_to_list(data, index):
 print("\nTAREFA 3: Imprimindo a lista de gêneros das primeiras 20 amostras")
 print(column_to_list(data_list, -2)[:20])
 
-  """ 
+""" 
   
   Função que adiciona as colunas(features) de uma lista em outra lista, na mesma ordem.
   Argumentos:
@@ -74,7 +74,7 @@ print(column_to_list(data_list, -2)[:20])
   Deve retornar...
   Uma lista com os valores da coluna escolhida pelo indice 'index'
 
-   """
+"""
 
 # ------------ NÃO MUDE NENHUM CÓDIGO AQUI ------------
 assert type(column_to_list(data_list, -2)) is list, "TAREFA 3: Tipo incorreto retornado. Deveria ser uma lista."
@@ -160,7 +160,7 @@ def most_popular_gender(data_list):
       Retorna:
           Uma string com o gênero mais popular:
           "Male" caso o masculino, "Female" caso o feminino e "Equal" se forem iguais.
-    """
+"""
 
 print("\nTAREFA 6: Qual é o gênero mais popular na lista?")
 print("O gênero mais popular na lista é: ", most_popular_gender(data_list))
@@ -280,7 +280,7 @@ assert len(start_stations) == 582, "TAREFA 10: Comprimento errado de start stati
 # TAREFA 11
 # Volte e tenha certeza que você documentou suas funções. Explique os parâmetros de entrada, a saída, e o que a função faz. Exemplo:
 # def new_function(param1: int, param2: str) -> list:
-      """
+"""
       Função de exemplo com anotações.
       Argumentos:
           param1: O primeiro parâmetro.
@@ -288,7 +288,7 @@ assert len(start_stations) == 582, "TAREFA 10: Comprimento errado de start stati
       Retorna:
           Uma lista de valores x.
 
-      """
+"""
 
 input("Aperte Enter para continuar...")
 # TAREFA 12 - Desafio! (Opcional)
