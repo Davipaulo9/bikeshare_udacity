@@ -122,12 +122,6 @@ def count_gender(data_list):
             female += 1
     return [male, female]
 
-"""
-Esta função itera sobre a coluna de gêneros e retorna em uma lista
-    Argumentos:
-data_list = lista de generos
-
-"""
 
 print("\nTAREFA 5: Imprimindo a quantidade de gêneros encontradas na lista")
 print(count_gender(data_list))
@@ -149,18 +143,7 @@ def most_popular_gender(data_list):
         answer = "Male"
     if pop_gender [0] < pop_gender [1]:
         answer = "Female"
-    else:
-        answer = "Equal"
     return answer
-
-"""
-    Função que retorna o gênero mais popular de uma lista de gêneros.
-      Argumentos:
-          data_list: lista de gêneros 
-      Retorna:
-          Uma string com o gênero mais popular:
-          "Male" caso o masculino, "Female" caso o feminino e "Equal" se forem iguais.
-"""
 
 print("\nTAREFA 6: Qual é o gênero mais popular na lista?")
 print("O gênero mais popular na lista é: ", most_popular_gender(data_list))
@@ -169,9 +152,10 @@ print("O gênero mais popular na lista é: ", most_popular_gender(data_list))
 assert type(most_popular_gender(data_list)) is str, "TAREFA 6: Tipo incorreto no retorno. Deveria retornar uma string."
 assert most_popular_gender(data_list) == "Male", "TAREFA 6: Resultado de retorno incorreto!"
 # -----------------------------------------------------
-#Added code to improve funcionality
 
-plt.legend((p1[0], p2[0]), ('Male', 'Female'))
+input("Aperte Enter para continuar...")
+# TAREFA 7
+# TODO: Crie um gráfico similar para user_types. Tenha certeza que a legenda está correta.
 # Se tudo está rodando como esperado, verifique este gráfico!
 gender_list = column_to_list(data_list, -2)
 types = ["Male", "Female"]
@@ -183,11 +167,6 @@ plt.xlabel('Gênero')
 plt.xticks(y_pos, types)
 plt.title('Quantidade por Gênero')
 plt.show(block=True)
-
-input("Aperte Enter para continuar...")
-# TAREFA 7
-# TODO: Crie um gráfico similar para user_types. Tenha certeza que a legenda está correta.
-
 print("\nTAREFA 7: Verifique o gráfico!")
 
 user_types_list = column_to_list(data_list, -3)
@@ -277,17 +256,19 @@ print(start_stations)
 assert len(start_stations) == 582, "TAREFA 10: Comprimento errado de start stations."
 # -----------------------------------------------------
  
+input("Aperte Enter para continuar...")
 # TAREFA 11
-# Volte e tenha certeza que você documentou suas funções. Explique os parâmetros de entrada, a saída, e o que a função faz. Exemplo:
-# def new_function(param1: int, param2: str) -> list:
-"""
-      Função de exemplo com anotações.
-      Argumentos:
-          param1: O primeiro parâmetro.
-          param2: O segundo parâmetro.
-      Retorna:
-          Uma lista de valores x.
+# Volte e tenha certeza que você documenteou suas funções. Explique os parâmetros de entrada, a saída, e o que a função faz. Exemplo:
+# def new_function(param1: int, param2: str) -> list:/
 
+
+"""
+Função de exemplo com anotações.
+  Argumentos:
+      param1: O primeiro parâmetro.
+      param2: O segundo parâmetro.
+  Retorna:
+      Uma lista de valores x.
 """
 
 input("Aperte Enter para continuar...")
@@ -296,36 +277,19 @@ input("Aperte Enter para continuar...")
 # para que nós possamos usar essa função com outra categoria de dados.
 print("Você vai encarar o desafio? (yes ou no)")
 answer = "yes"
-print(answer)
-
 
 def count_items(column_list):
     item_types = []
     count_items = []
-    for item in count_items:
-        item_types.append(item)
-        count_items.append(column_list.count(item))
+
+    item_types = list(set(column_list))
+    
+    for it in item_types:
+        count_items.append(column_list.count(it))
+
     return item_types, count_items
 
-"""
-Função que conta a ocorrência de cada item diferente em uma lista, sem ser necessário definir os itens.
-      Argumentos:
-          column_list: A lista de itens (list).
-      Retorna:
-          Uma tupla (item_types, count_items):
-                item_types - os tipos diferentes de itens na lista.
-                count_items - quantidade de cada tipo de itens na lista.
-
-"""
-
-
 if answer == "yes":
-
-    print("Há 3 tipos de gênero!")
-    print("\nTarefa 11: Imprimindo resultados para número de items:")
-    print(count_items)
-
-    
     # ------------ NÃO MUDE NENHUM CÓDIGO AQUI ------------
     column_list = column_to_list(data_list, -2)
     types, counts = count_items(column_list)
@@ -334,4 +298,3 @@ if answer == "yes":
     assert len(types) == 3, "TAREFA 12: Há 3 tipos de gênero!"
     assert sum(counts) == 1551505, "TAREFA 12: Resultado de retorno incorreto!"
     # -----------------------------------------------------
-
